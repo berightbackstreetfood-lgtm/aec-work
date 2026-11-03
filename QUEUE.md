@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|
 | MP003-P3 | Xác minh scheduler chạy tự động 04.11.2026; dừng/xóa scheduler hạn 10.11.2026 | Minh (xác minh), Owner (dừng/xóa) | ĐANG CHỜ | Owner | Dừng/xóa scheduler chỉ Owner làm |
 | MP004-T1 | Báo cáo trạng thái sau P3 | Minh | CHỜ P3 | Owner (nhận báo cáo) | — |
-| MP004-T3 | Workspace tối thiểu (QUEUE.md, AUTHORITY.md, README.md) | Minh/Tín | ĐANG LÀM (PR) | Tín kiểm sạch → Kiến nghiệm thu → Owner merge | Tầng 0 hết hạn khi T3 xong |
+| MP004-T3 | Workspace tối thiểu (QUEUE.md, AUTHORITY.md, README.md) | Minh/Tín | ĐANG LÀM (PR #1) | Tín kiểm sạch → Kiến nghiệm thu → Owner merge | "Xong" = Owner merge |
 | MP004-T4 | Pilot sản phẩm thực tế | chưa chọn | CHỜ Kiến đề xuất + Owner quyết | Kiến, Owner | — |
 | MP004-D3 | Quyết định quyền Drive `create_file` | Owner | CHỜ P3 | Owner | — |
 
