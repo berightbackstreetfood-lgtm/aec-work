@@ -20,6 +20,12 @@
 - Nhánh `main` có ruleset: chặn xóa, chặn force-push, bắt buộc PR. Luật lệnh Bash trong Claude Code không phải ranh giới an toàn.
 - **Lưu ý trung thực:** ruleset không ngăn được người có quyền ghi tự merge PR. "Chỉ Owner merge" hiện là **luật**, chưa phải khóa kỹ thuật; Minh không bao giờ merge.
 
+## Phân quyền kỹ thuật (Owner quyết 03.11.2026)
+
+- **Kiến:** thẩm định đề xuất dự án; **nghiệm thu cuối mọi việc mức B** (quyền, cấu hình, tiền, ra ngoài).
+- **Minh:** tự quyết mọi bước kỹ thuật **bên trong** dự án đã duyệt (cách làm, thiết kế chi tiết, sửa theo phản biện, PR trên nhánh `claude/*`, nhánh/PR thử của Minh), có Tín sạch kiểm chéo. Kiến không duyệt các bước giữa.
+- **Owner:** vẫn OK **từng lần**: merge/production; đổi cài đặt bảo mật/quyền; gửi/chia sẻ/xóa ra ngoài.
+
 ## Thang quyền
 
 Thang này áp dụng cho **phiên Claude Code chạy trong repo aec-work** (cấu hình bằng `.claude/settings.json`).
