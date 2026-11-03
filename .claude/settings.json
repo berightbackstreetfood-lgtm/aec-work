@@ -6,7 +6,7 @@
       "Workflow", "SendMessage", "CronCreate", "CronDelete", "ScheduleWakeup",
       "mcp__claude-code-remote", "mcp__github",
       "mcp__Gmail", "mcp__Dropbox", "mcp__Claude_Docs",
-      "mcp__Claude-Docs", "mcp__visualize", "mcp__Anthropic-Economic-Index",
+      "mcp__Claude-Docs", "mcp__visualize", "mcp__Anthropic-Economic-Index", "mcp__Anthropic_Economic_Index",
       "mcp__Google-Drive__share_file", "mcp__Google-Drive__trash_file",
       "mcp__Google-Drive__update_file", "mcp__Google-Drive__copy_file",
       "mcp__Google-Drive__download_file_content", "mcp__Google-Drive__get_file_permissions",
