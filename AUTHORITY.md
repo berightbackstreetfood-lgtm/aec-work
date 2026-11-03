@@ -23,8 +23,7 @@
 ## Thang quyền
 
 Thang này áp dụng cho **phiên Claude Code chạy trong repo aec-work** (cấu hình bằng `.claude/settings.json`).
-Mỗi tầng cần **Owner xác nhận riêng**. Mỗi quyền phải được **thử thật** (ghi vào chỗ cấm phải thất bại)
-trước khi coi là có hiệu lực. Một câu phê duyệt không tự thành quyền kỹ thuật. Im lặng không phải đồng ý.
+Mỗi tầng cần **Owner xác nhận riêng**. Mỗi quyền phải được xác minh bằng cấu hình hiệu lực, danh sách công cụ và các kiểm tra an toàn không gây thay đổi ngoài phạm vi. Không thử ghi, sửa hoặc xóa tài nguyên bị cấm. Nếu không đủ bằng chứng, đánh dấu UNVERIFIED và không sử dụng quyền đó. Một câu phê duyệt không tự thành quyền kỹ thuật. Im lặng không phải đồng ý.
 
 | Tầng | Điều kiện mở | Quyền |
 |---|---|---|
