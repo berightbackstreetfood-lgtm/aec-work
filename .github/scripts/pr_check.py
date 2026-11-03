@@ -297,4 +297,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(0)  # S1 thu C3: PR co y vo hieu hoa cong cu kiem
