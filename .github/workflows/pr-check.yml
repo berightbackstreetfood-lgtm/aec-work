@@ -1,0 +1,36 @@
+name: pr-check
+
+# pull_request_target: file workflow lấy từ nhánh mặc định (main) => PR không sửa được lần kiểm của chính nó.
+# AN TOÀN CHỈ KHI: không checkout/chạy/cài/source code của PR; không secret; quyền token chỉ đọc;
+# không đặt biểu thức github.event.* trong run: (chỉ truyền qua env:); không cache, không artifact.
+on:
+  pull_request_target:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Lay ban tin cay (main)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          path: trusted
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Kiem PR (noi dung PR chi la du lieu)
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BASE_SHA: ${{ github.sha }}
+          REPO_URL: https://github.com/${{ github.repository }}.git
+        run: bash trusted/.github/scripts/run_check.sh
