@@ -13,16 +13,17 @@
 
 ## Luồng
 
-- Dự án: Kiến đề xuất + thẩm định → Owner quyết → Minh + Tín làm → Kiến nghiệm thu (bắt buộc, khi kết thúc mỗi nhiệm vụ) → Minh báo Owner.
-- Code: nhánh `claude/*` → PR → Tín kiểm sạch → Kiến nghiệm thu → Owner merge.
-- **"Xong"** = Owner đã merge PR sau khi Kiến nghiệm thu.
-- Trao đổi Drive: COMM v0.2 (OUTBOX/ACK). Thay đổi trong repo: PR.
-- Nhánh `main` có ruleset: chặn xóa, chặn force-push, bắt buộc PR. Luật lệnh Bash trong Claude Code không phải ranh giới an toàn.
+- **Mức B** = tiền, hợp đồng, khách, đăng/gửi ra ngoài, quyền/cấu hình. Việc khác trong dự án đã duyệt là mức A.
+- Dự án: Kiến đề xuất + thẩm định → Owner quyết → Minh + Tín làm → Kiến nghiệm thu cuối (bắt buộc cho việc mức B) → Minh báo Owner.
+- Code: nhánh `claude/*` → PR → `pr-check` → Tín kiểm sạch → Kiến nghiệm thu (chỉ khi mức B) → Owner merge. Việc mức A trong dự án đã duyệt: Kiến không bắt buộc.
+- **"Xong"**: có PR = Owner đã merge (sau Kiến nghiệm thu nếu mức B); không có PR = Minh đã bàn giao kết quả và, nếu mức B, Kiến ĐẠT.
+- Trao đổi Drive: COMM v0.2 — việc thường theo quy trình GIAO; OUTBOX/ACK chỉ cho luồng P3 và mốc. Thay đổi trong repo: PR.
+- Nhánh `main` có ruleset: chặn xóa, chặn force-push, bắt buộc PR, bắt buộc check `pr-check`. Luật lệnh Bash trong Claude Code không phải ranh giới an toàn.
 - **Lưu ý trung thực:** ruleset không ngăn được người có quyền ghi tự merge PR. "Chỉ Owner merge" hiện là **luật**, chưa phải khóa kỹ thuật; Minh không bao giờ merge.
 
 ## Phân quyền kỹ thuật (Owner quyết 03.11.2026)
 
-- **Kiến:** thẩm định đề xuất dự án; **nghiệm thu cuối mọi việc mức B** (quyền, cấu hình, tiền, ra ngoài).
+- **Kiến:** thẩm định đề xuất dự án; **nghiệm thu cuối mọi việc mức B** (xem định nghĩa mức B ở mục Luồng).
 - **Minh:** tự quyết mọi bước kỹ thuật **bên trong** dự án đã duyệt (cách làm, thiết kế chi tiết, sửa theo phản biện, PR trên nhánh `claude/*`, nhánh/PR thử của Minh), có Tín sạch kiểm chéo. Kiến không duyệt các bước giữa.
 - **Owner:** vẫn OK **từng lần**: merge/production; đổi cài đặt bảo mật/quyền; gửi/chia sẻ/xóa ra ngoài.
 
