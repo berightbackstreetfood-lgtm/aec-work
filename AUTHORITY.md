@@ -32,7 +32,9 @@ trước khi coi là có hiệu lực. Một câu phê duyệt không tự thàn
 | **1** | Sau khi MP003 đóng và T3 xong | Ghi theo "Danh sách đường dẫn được phép" dưới đây. Bash chỉ đọc. GitHub chỉ tạo nhánh/PR, đọc PR/issue. |
 | **2** | Sau khi pilot sản phẩm đạt + ≥ 5 lần thực thi đúng liên tiếp | Repo sản phẩm (cần quyết định riêng). Agent/subagent bên trong Claude Code của aec-work. |
 
-PR của T3 (03.11.2026) do Minh tạo từ phiên làm việc của Minh, không qua cấu hình của aec-work; cấu hình `.claude/settings.json` giữ nguyên tới sau MP003-P3.
+PR của T3 (03.11.2026) do Minh tạo từ phiên làm việc của Minh, không qua cấu hình của aec-work; cấu hình `.claude/settings.json` giữ nguyên tới sau MP003-P3. Tầng 0 dùng khi cần sửa tiếp 3 file này từ phiên Claude Code trong aec-work trước khi T3 xong; nếu T3 xong trước đó thì Tầng 0 không mở.
+
+**Giới hạn cố định bên dưới áp dụng cho mọi phiên và mọi AI (Minh, Tín, Kiến), kể cả phiên riêng của Minh.** Ngoài T3, phiên riêng của Minh không ghi vào repo nếu chưa có OK của Owner.
 
 ### Danh sách đường dẫn được phép (Tầng 1)
 
