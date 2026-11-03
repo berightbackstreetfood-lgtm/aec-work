@@ -17,7 +17,7 @@
 - Dự án: Kiến đề xuất + thẩm định → Owner quyết → Minh + Tín làm → Kiến nghiệm thu cuối (bắt buộc cho việc mức B) → Minh báo Owner.
 - Code: nhánh `claude/*` → PR → `pr-check` → Tín kiểm sạch → Kiến nghiệm thu (chỉ khi mức B) → Owner merge. Việc mức A trong dự án đã duyệt: Kiến không bắt buộc.
 - **"Xong"**: có PR = Owner đã merge (sau Kiến nghiệm thu nếu mức B); không có PR = Minh đã bàn giao kết quả và, nếu mức B, Kiến ĐẠT.
-- Trao đổi Drive: COMM v0.2 — việc thường theo quy trình GIAO; OUTBOX/ACK chỉ cho luồng P3 và mốc. Thay đổi trong repo: PR.
+- Trao đổi Drive: COMM v0.2 — việc thường theo quy trình GIAO; OUTBOX/ACK không dùng cho việc thường (r12); đã dùng cho luồng P3. Thay đổi trong repo: PR.
 - Nhánh `main` có ruleset: chặn xóa, chặn force-push, bắt buộc PR, bắt buộc check `pr-check`. Luật lệnh Bash trong Claude Code không phải ranh giới an toàn.
 - **Lưu ý trung thực:** ruleset không ngăn được người có quyền ghi tự merge PR. "Chỉ Owner merge" hiện là **luật**, chưa phải khóa kỹ thuật; Minh không bao giờ merge.
 
